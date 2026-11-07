@@ -1,0 +1,19 @@
+# StoryForge Configuration
+inkwell:
+  books_dir: "data/books"
+  vector_path: "data/lancedb"
+
+  llm:
+    api_key: "magpie-local"
+    model: "auto/deepseek-v4-flash"
+    base_url: "http://127.0.0.1:3425/v1"
+    max_tokens: 4096
+
+  embedding:
+    model: "BAAI/bge-m3"
+    device: "cpu"
+    offline: true   # skip HF Hub API calls — use cached model only
+
+  chunking:
+    chunk_size: 600
+    overlap: 100
